@@ -13,6 +13,19 @@
   --font-display: "Space Grotesk", sans-serif;
 }
 
+/* Brand italics and AI font tweaks requested */
+.brand-italic {
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.ai-font {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

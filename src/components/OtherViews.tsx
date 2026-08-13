@@ -5,6 +5,7 @@ import {
   ArrowLeft, Search, Bookmark, Clock4, ExternalLink, Briefcase, FileText
 } from "lucide-react";
 import { BlogPost, ServiceDetail, Niche } from "../types";
+import CaseStudyTalhaRana from "./CaseStudyTalhaRana";
 import { SERVICES_DATA, BLOG_POSTS_DATA, FAQ_DATA } from "../data";
 
 interface OtherViewsProps {
@@ -846,6 +847,13 @@ export default function OtherViews({ view, setView, selectedId, setSelectedId }:
         </div>
       </div>
     );
+  }
+
+  // -----------------------------------------------------------------
+  // VIEW: TALHA RANA HVAC CASE STUDY
+  // -----------------------------------------------------------------
+  if (view === "case-study-talha-rana-hvac") {
+    return <CaseStudyTalhaRana setView={setView} />;
   }
 
   // -----------------------------------------------------------------

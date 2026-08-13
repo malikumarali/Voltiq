@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import CaseStudyTeaser from "./CaseStudyTeaser";
 import { 
   Zap, ArrowRight, Play, Check, ChevronDown, ChevronUp, Star, MessageSquare, 
   Mail, Calendar, ShoppingBag, Building2, Stethoscope, Utensils, 
@@ -119,7 +120,7 @@ export default function HomeView({ setView, setSelectedId }: HomeViewProps) {
                 </div>
                 <div className="relative inline-block w-full">
                   <div>
-                    <span className="text-[#F5C500]">Digital Marketing</span> & <span className="text-[#F5C500]">AI Solutions</span>
+                    <span className="text-[#F5C500]">Digital Marketing</span> & <span className="text-[#F5C500] ai-font">AI Solutions</span>
                   </div>
                   {/* Swoosh underline element */}
                   <svg className="absolute left-1/2 transform -translate-x-1/2 -bottom-3 w-4/5 h-4 text-[#F5C500]" viewBox="0 0 338 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -194,6 +195,9 @@ export default function HomeView({ setView, setSelectedId }: HomeViewProps) {
           </div>
         </div>
       </section>
+
+      {/* CASE STUDY TEASER */}
+      <CaseStudyTeaser setView={setView} />
 
       {/* SECTION 2 — SOCIAL PROOF / STAT STRIP */}
       <section id="stat-strip-section" className="bg-[#F4F7FF] border-y border-[#BDCEFF] py-8 relative z-35">

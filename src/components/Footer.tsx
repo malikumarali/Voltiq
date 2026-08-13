@@ -38,7 +38,7 @@ export default function Footer({ setCurrentView }: FooterProps) {
               className="flex items-center space-x-2 cursor-pointer group w-fit"
             >
               <Zap className="h-6 w-6 text-[#F5C500] fill-[#F5C500]" />
-              <span className="font-display text-xl font-black text-[#0A163B] tracking-tight">
+              <span className="font-display text-xl font-black text-[#0A163B] tracking-tight brand-italic">
                 VOLT<span className="text-[#F5C500]">IQ</span>
               </span>
             </div>

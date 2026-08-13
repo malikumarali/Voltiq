@@ -65,7 +65,7 @@ export default function Header({ currentView, setCurrentView }: HeaderProps) {
             className="flex items-center space-x-2 cursor-pointer group"
           >
             <Zap className="h-7 w-7 text-[#F5C500] fill-[#F5C500] transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12" />
-            <span className="font-display text-2xl font-black tracking-tight text-[#0A163B]">
+            <span className="font-display text-2xl font-black tracking-tight text-[#0A163B] brand-italic">
               VOLT<span className="text-[#F5C500]">IQ</span>
             </span>
           </div>
