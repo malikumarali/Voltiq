@@ -16,7 +16,7 @@ export default function CaseStudyTalhaRana({ setView }: Props) {
         body: JSON.stringify({ ...contactForm, source: 'Case Study - Talha Rana HVAC' })
       });
       const data = await response.json();
-      setFormResponse(data.message || 'Thank you! We'll be in touch shortly.');
+      setFormResponse(data.message || 'Thank you! We\'ll be in touch shortly.');
       setContactForm({ name: '', email: '', phone: '', message: '' });
     } catch (error) {
       setFormResponse('Error submitting form. Please try again.');
