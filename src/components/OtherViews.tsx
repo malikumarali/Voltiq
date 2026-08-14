@@ -6,6 +6,10 @@ import {
 } from "lucide-react";
 import { BlogPost, ServiceDetail, Niche } from "../types";
 import CaseStudyTalhaRana from "./CaseStudyTalhaRana";
+import CaseStudyNaveedCarRental from "./CaseStudyNaveedCarRental";
+import CaseStudyAIAutomation from "./CaseStudyAIAutomation";
+import CaseStudyCustomSystems from "./CaseStudyCustomSystems";
+import CaseStudyTeaser from "./CaseStudyTeaser";
 import { SERVICES_DATA, BLOG_POSTS_DATA, FAQ_DATA } from "../data";
 
 interface OtherViewsProps {
@@ -186,6 +190,15 @@ export default function OtherViews({ view, setView, selectedId, setSelectedId }:
               </p>
             </div>
           </div>
+
+          {/* CASE STUDIES SECTION */}
+          <section className="mt-20 pt-20 border-t border-[#BDCEFF]">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-[#0A163B] mb-4">Case Studies</h2>
+              <p className="text-lg text-[#41517D] max-w-2xl mx-auto">See how we've helped businesses like yours transform operations, boost revenue, and scale sustainably.</p>
+            </div>
+            <CaseStudyTeaser setView={setView} />
+          </section>
         </div>
       </div>
     );
@@ -306,6 +319,30 @@ export default function OtherViews({ view, setView, selectedId, setSelectedId }:
                     </div>
                   ))}
                 </div>
+              </div>
+
+              {/* Explore Case Study Button */}
+              <div className="bg-gradient-to-br from-[#EEF0FB] to-[#F4F7FF] border border-[#BDCEFF] p-6 rounded-lg">
+                <h4 className="font-display text-sm font-black text-[#0A163B] uppercase mb-3 tracking-wider">See Real Results</h4>
+                <p className="text-xs text-[#41517D] mb-4">Explore case studies showing actual transformations and ROI from {service.name} implementations across industries.</p>
+                <button
+                  onClick={() => {
+                    const caseStudyMap: Record<string, string> = {
+                      "web-dev": "case-study-naveed-car-rental",
+                      "seo": "case-study-talha-rana-hvac",
+                      "social": "case-study-ai-automation",
+                      "ads": "case-study-ai-automation",
+                      "ai-automation": "case-study-ai-automation",
+                      "custom-systems": "case-study-custom-solutions"
+                    };
+                    const caseStudyView = caseStudyMap[service.id] || 'about';
+                    setView(caseStudyView);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="w-full bg-[#1A3FD8] hover:bg-[#0A163B] text-white font-sans font-extrabold uppercase text-xs tracking-wider py-3 rounded transition-all cursor-pointer shadow-sm"
+                >
+                  Explore Case Study
+                </button>
               </div>
             </div>
 
@@ -854,6 +891,27 @@ export default function OtherViews({ view, setView, selectedId, setSelectedId }:
   // -----------------------------------------------------------------
   if (view === "case-study-talha-rana-hvac") {
     return <CaseStudyTalhaRana setView={setView} />;
+  }
+
+  // -----------------------------------------------------------------
+  // VIEW: MR NAVEED CAR RENTAL CASE STUDY
+  // -----------------------------------------------------------------
+  if (view === "case-study-naveed-car-rental") {
+    return <CaseStudyNaveedCarRental setView={setView} />;
+  }
+
+  // -----------------------------------------------------------------
+  // VIEW: AI AUTOMATION CASE STUDY
+  // -----------------------------------------------------------------
+  if (view === "case-study-ai-automation") {
+    return <CaseStudyAIAutomation setView={setView} />;
+  }
+
+  // -----------------------------------------------------------------
+  // VIEW: CUSTOM SYSTEMS CASE STUDY
+  // -----------------------------------------------------------------
+  if (view === "case-study-custom-solutions") {
+    return <CaseStudyCustomSystems setView={setView} />;
   }
 
   // -----------------------------------------------------------------

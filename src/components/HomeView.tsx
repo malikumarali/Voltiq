@@ -196,9 +196,6 @@ export default function HomeView({ setView, setSelectedId }: HomeViewProps) {
         </div>
       </section>
 
-      {/* CASE STUDY TEASER */}
-      <CaseStudyTeaser setView={setView} />
-
       {/* SECTION 2 — SOCIAL PROOF / STAT STRIP */}
       <section id="stat-strip-section" className="bg-[#F4F7FF] border-y border-[#BDCEFF] py-8 relative z-35">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

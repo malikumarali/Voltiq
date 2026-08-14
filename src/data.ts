@@ -68,6 +68,40 @@ export const SERVICES_DATA: ServiceDetail[] = [
       { title: "ROAS-First Optimization", desc: "We actively shift capital into high-performing placements to squeeze maximum return on every ad dollar spent." }
     ],
     iconName: "Megaphone"
+  },
+  {
+    id: "ai-automation",
+    name: "AI Automation & Workflows",
+    tagline: "Intelligent systems that think and learn from patterns.",
+    painPoint: "Manual processes don't scale. You're paying your team to do work machines could handle while missing actionable intelligence from your data.",
+    benefits: [
+      "ML models that predict customer behavior and outcomes",
+      "24/7 automation of repetitive workflows and tasks",
+      "Continuous improvement through pattern recognition"
+    ],
+    features: [
+      { title: "Predictive Analytics", desc: "Machine learning models that forecast customer behavior, demand shifts, and churn probability before it happens." },
+      { title: "Process Automation", desc: "Intelligent bots and workflows that handle repetitive tasks 24/7 without human intervention or errors." },
+      { title: "Natural Language Processing", desc: "AI-powered chatbots, document analysis, and sentiment detection that scale customer interactions." }
+    ],
+    iconName: "Zap"
+  },
+  {
+    id: "custom-systems",
+    name: "Custom System Solutions",
+    tagline: "Enterprise software built exactly for your business.",
+    painPoint: "Off-the-shelf software forces you to fit your business into their box. Custom systems eliminate compromises and feature bloat.",
+    benefits: [
+      "Full-stack architecture designed for your exact workflows",
+      "Zero technical debt — clean code from day one",
+      "Enterprise security and scalability built-in"
+    ],
+    features: [
+      { title: "Built-to-Spec Architecture", desc: "Frontend, backend, database, and infrastructure optimized as one cohesive system for maximum performance." },
+      { title: "Production-Ready Quality", desc: "Enterprise-grade code with comprehensive testing, documentation, and zero shortcuts from the start." },
+      { title: "Compliance & Security", desc: "Built-in encryption, audit trails, access controls, and compliance frameworks (HIPAA, SOC2, etc.) as standard." }
+    ],
+    iconName: "Code"
   }
 ];
 
